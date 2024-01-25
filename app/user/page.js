@@ -1,9 +1,9 @@
 import React from 'react'
 
 const page = () => {
-  return (
-    <div>Welcome user</div>
-  )
+    return (
+        <div> welcome user what is your id</div>
+    )
 }
 
 export default page

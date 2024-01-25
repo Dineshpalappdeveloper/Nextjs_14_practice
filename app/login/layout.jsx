@@ -5,11 +5,11 @@
 //   const data = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
 //   return data.data
 // }
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
 
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <div>
+      {children}
+    </div>
   )
 }

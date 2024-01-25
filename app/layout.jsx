@@ -1,9 +1,9 @@
 
 import axios from "axios"
-
+import Navbar from "../component/header/navbar"
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
-  const id = 6
+  const id = 9
   // console.log(id);
   // fetch data
   const product = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => res.data)
@@ -19,7 +19,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div>
+          <Navbar />
+          {children}
+
+        </div>
+      </body>
     </html>
   )
 }
