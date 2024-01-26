@@ -20,6 +20,10 @@ class page extends Component {
         return (
             <div>
                 <p>
+                    {
+                    }
+                </p>
+                <p>
                     <div onClick={this.userdata}>page</div>
                     <Link href="/" >home</Link>
 
