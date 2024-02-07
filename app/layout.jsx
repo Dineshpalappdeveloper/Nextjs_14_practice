@@ -1,35 +1,30 @@
 
 import axios from "axios"
 import Navbar from "../component/header/navbar"
-
-import { Roboto } from 'next/font/google'
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
   // const id = 9
   // console.log(id);
   // fetch data
-  // const product = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => res.data)
+  // const product = await axios.get(`/${id}`).then((res) => res.data)
 
   // optionally access and extend (rather than replace) parent metadata
 
   return {
-    title: "Ganpati Technology"
+    title: "Ganpati Technology",
+
+
+
+    openGraph: {
+      images: 'https://www.mypustak.com/_next/image?url=https%3A%2F%2Fd239pyg5al708u.cloudfront.net%2Fuploads%2Fhomebanner%2FHOME_1_1_82&w=1920&q=75',
+    },
 
   }
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roboto.className}>
-
+    <html lang="en">
       <body>
         <div>
           <Navbar />
