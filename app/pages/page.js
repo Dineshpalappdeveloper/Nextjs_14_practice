@@ -1,8 +1,13 @@
 import React from 'react'
+import AddUser from './AddUser'
+import UserList from './UserList'
 
 const page = () => {
     return (
-        <div>page</div>
+        <div>
+            <AddUser />
+            <UserList />
+        </div>
     )
 }
 
